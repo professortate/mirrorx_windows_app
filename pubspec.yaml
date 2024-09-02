@@ -2,15 +2,36 @@ name: scrcpy_flutter_windows
 description: A Flutter project for scrcpy on Windows.
 
 environment:
-  sdk: '>=2.19.0 <4.0.0'
+  sdk: ">=2.19.0 <4.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
-  process_run: ^0.12.0
-  path_provider: ^2.0.11
-  file_picker: ^4.6.1
+  process_run: ^1.2.0  # Updated to the latest version
+  path_provider: ^2.1.4  # Updated to the latest version
+  shared_preferences: ^2.1.1  # Updated to the latest version
+  fluttertoast: ^8.2.8  # Downgraded to a compatible version
+  file_picker: ^8.1.2  # Updated to the latest version
   window_size:
     git:
       url: https://github.com/google/flutter-desktop-embedding.git
       path: plugins/window_size
+
+flutter:
+  assets:
+    - assets/adb.exe
+    - assets/AdbWinApi.dll
+    - assets/AdbWinUsbApi.dll
+    - assets/avcodec-61.dll
+    - assets/avformat-61.dll
+    - assets/avutil-59.dll
+    - assets/icon.png
+    - assets/desktop.ini
+    - assets/open_a_terminal_here.bat
+    - assets/scrcpy.exe
+    - assets/scrcpy-console.bat
+    - assets/scrcpy-noconsole.vbs
+    - assets/scrcpy-server
+    - assets/SDL2.dll
+    - assets/swresample-5.dll
+    - assets/libusb-1.0.dll
